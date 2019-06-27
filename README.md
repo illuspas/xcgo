@@ -2,7 +2,7 @@
 CGO Cross Compiler
 
 ## Support Target
-* Linux x86_64 | armhf | aarch64
+* Linux x86_64 | armhf | aarch64 | mips64el
 * Windows x86_64
 
 ## Usage 
