@@ -24,3 +24,5 @@ cd project_dir
 docker run --rm -v $(pwd):/workdir -e CGO_ENABLED=1 -e GOOS=windows -e GOARCH=amd64 -e CC=x86_64-w64-mingw32-gcc xcgo:latest go build -v
 ```
 
+# TODO
+Add darwin-x86_64
