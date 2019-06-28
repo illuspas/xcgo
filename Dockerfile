@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	make \
 	gcc \
 	g++ \
+	yasm \
 	pkg-config \
 	gcc-mingw-w64 \
 	g++-mingw-w64 \
