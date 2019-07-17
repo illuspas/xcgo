@@ -1,10 +1,12 @@
 FROM ubuntu:xenial
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	ca-certificates \	
+	ca-certificates \
+	unzip \
 	git \
 	curl \
 	make \
+	cmake \
 	gcc \
 	g++ \
 	yasm \
@@ -23,7 +25,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	g++-mips64el-linux-gnuabi64 \
 	pkg-config-mips64el-linux-gnuabi64 \
     && apt-get clean \
-    && curl https://dl.google.com/go/go1.12.6.linux-amd64.tar.gz | tar xvz -C /usr/local 
+    && curl https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz | tar xvz -C /usr/local 
 
 ENV GOPATH /go
 
