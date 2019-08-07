@@ -4,6 +4,7 @@ CGO Cross Compiler
 ## Support Target
 * Linux amd64 | arm | arm64 | mips64el
 * Windows amd64 | 386
+* Darwin amd64 
 
 ## Usage 
 linux amd64
@@ -39,6 +40,4 @@ docker run --rm -v $(pwd):/workdir -e CGO_ENABLED=1 -e GOOS=windows -e GOARCH=am
 | Linux        |    mips64el    |  mips64el-linux-gnuabi64-gcc  |mips64el-linux-gnuabi64-g++  |
 | Windows        |    amd64    |  x86_64-w64-mingw32-gcc  |x86_64-w64-mingw32-g++  |
 | Windows        |    386    |  i686-w64-mingw32-gcc  |i686-w64-mingw32-g++  |
-
-# TODO
-Add darwin-x86_64
+| MacOS | amd64 | x86_64-apple-darwin14-cc| x86_64-apple-darwin14-c++ |
