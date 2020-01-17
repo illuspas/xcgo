@@ -12,9 +12,11 @@ RUN apt-get update && apt-get install -y  \
 	clang \
 	llvm \
 	yasm \
+	nasm \
 	pkg-config \
 	gcc-mingw-w64 \
 	g++-mingw-w64 \
+	libz-mingw-w64-dev \
 	pkg-config-mingw-w64-i686 \
 	pkg-config-mingw-w64-x86-64 \
 	gcc-arm-linux-gnueabihf \ 
@@ -27,7 +29,7 @@ RUN apt-get update && apt-get install -y  \
 	g++-mips64el-linux-gnuabi64 \
 	pkg-config-mips64el-linux-gnuabi64 \
     && apt-get clean \
-    && curl https://dl.google.com/go/go1.13.linux-amd64.tar.gz | tar xvz -C /usr/local \
+    && curl https://dl.google.com/go/go1.13.6.linux-amd64.tar.gz | tar xvz -C /usr/local \
     && curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/osxcross-10.10.tar.gz | tar xvz -C /
 
 ENV GOPATH /go
