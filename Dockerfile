@@ -29,7 +29,7 @@ RUN apt-get update && apt-get install -y  \
 	g++-mips64el-linux-gnuabi64 \
 	pkg-config-mips64el-linux-gnuabi64 \
     && apt-get clean \
-    && curl https://dl.google.com/go/go1.13.8.linux-amd64.tar.gz | tar xvz -C /usr/local \
+    && curl https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz | tar xvz -C /usr/local \
     && curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/osxcross-10.10.tar.gz | tar xvz -C /
 
 ENV GOPATH /go
