@@ -28,9 +28,9 @@ RUN apt-get update && apt-get install -y  \
 	gcc-mips64el-linux-gnuabi64 \
 	g++-mips64el-linux-gnuabi64 \
 	pkg-config-mips64el-linux-gnuabi64 \
-    && apt-get clean \
-    && curl https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz | tar xvz -C /usr/local \
-    && curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/osxcross-10.10.tar.gz | tar xvz -C / \
+	&& apt-get clean \
+	&& curl https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz | tar xvz -C /usr/local \
+	&& curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/osxcross-10.10.tar.gz | tar xvz -C / \
 	&& curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/freebsd-9.tar.gz | tar xvz -C / 
 
 ENV GOPATH /go
