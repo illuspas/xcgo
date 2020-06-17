@@ -13,10 +13,10 @@ RUN apt-get update && apt-get install -y  \
 	llvm \
 	yasm \
 	nasm \
+	ccache \
 	pkg-config \
 	gcc-mingw-w64 \
 	g++-mingw-w64 \
-	libz-mingw-w64-dev \
 	pkg-config-mingw-w64-i686 \
 	pkg-config-mingw-w64-x86-64 \
 	gcc-arm-linux-gnueabihf \ 
@@ -31,12 +31,12 @@ RUN apt-get update && apt-get install -y  \
 	&& apt-get clean \
 	&& curl https://dl.google.com/go/go1.14.4.linux-amd64.tar.gz | tar xvz -C /usr/local \
 	&& curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/osxcross-10.10.tar.gz | tar xvz -C / \
-	&& curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/freebsd-9.tar.gz | tar xvz -C /usr 
+	&& curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/freebsd-9.tar.gz | tar xvz -C / 
 
 ENV GOPATH /go
 
-ENV LD_LIBRARY_PATH /usr/freebsd/lib
+ENV LD_LIBRARY_PATH /freebsd/lib
 
-ENV PATH $GOPATH/bin:/usr/local/go/bin:/usr/osxcross/target/bin:/usr/freebsd/bin:$PATH
+ENV PATH $GOPATH/bin:/usr/local/go/bin:/usr/osxcross/target/bin:/freebsd/bin:$PATH
 
 WORKDIR /workdir
