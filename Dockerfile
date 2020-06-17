@@ -29,14 +29,14 @@ RUN apt-get update && apt-get install -y  \
 	g++-mips64el-linux-gnuabi64 \
 	pkg-config-mips64el-linux-gnuabi64 \
 	&& apt-get clean \
-	&& curl https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz | tar xvz -C /usr/local \
+	&& curl https://dl.google.com/go/go1.14.4.linux-amd64.tar.gz | tar xvz -C /usr/local \
 	&& curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/osxcross-10.10.tar.gz | tar xvz -C / \
-	&& curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/freebsd-9.tar.gz | tar xvz -C / 
+	&& curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/freebsd-9.tar.gz | tar xvz -C /usr 
 
 ENV GOPATH /go
 
-ENV LD_LIBRARY_PATH /freebsd/lib
+ENV LD_LIBRARY_PATH /usr/freebsd/lib
 
-ENV PATH $GOPATH/bin:/usr/local/go/bin:/usr/osxcross/target/bin:/freebsd/bin:$PATH
+ENV PATH $GOPATH/bin:/usr/local/go/bin:/usr/osxcross/target/bin:/usr/freebsd/bin:$PATH
 
 WORKDIR /workdir
