@@ -30,8 +30,8 @@ RUN apt-get update && apt-get install -y  \
 	pkg-config-mips64el-linux-gnuabi64 \
 	&& apt-get clean \
 	&& curl https://dl.google.com/go/go1.14.5.linux-amd64.tar.gz | tar xvz -C /usr/local \
-	&& curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/osxcross-10.10.tar.gz | tar xvz -C / \
-	&& curl https://media.githubusercontent.com/media/illuspas/resources/master/tar/freebsd-9.tar.gz | tar xvz -C / 
+	&& curl https://cdn.nodemedia.cn/tar/osxcross-10.10.tar.gz | tar xvz -C / \
+	&& curl https://cdn.nodemedia.cn/tar/freebsd-9.tar.gz | tar xvz -C / 
 
 ENV GOPATH /go
 
