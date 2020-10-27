@@ -1,5 +1,5 @@
 # xcgo
-CGO Cross Compiler
+CGO Cross Compiler, Used for compiling [NMSv3](https://github.com/NodeMedia/NodeMediaServer)
 
 ## Support Target
 * Linux amd64 | arm | arm64 | mips64el
