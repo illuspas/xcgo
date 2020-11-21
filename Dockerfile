@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y  \
 	gcc \
 	g++ \
 	clang \
+	clang-3.9 \
 	llvm \
 	yasm \
 	nasm \
@@ -30,7 +31,7 @@ RUN apt-get update && apt-get install -y  \
 	pkg-config-mips64el-linux-gnuabi64 \
 	&& apt-get clean \
 	&& curl https://dl.google.com/go/go1.15.5.linux-amd64.tar.gz | tar xvz -C /usr/local \
-	&& curl https://cdn.nodemedia.cn/tar/osxcross-10.10.tar.gz | tar xvz -C / \
+	&& curl https://cdn.nodemedia.cn/tar/osxcross-11.0.tar.gz | tar xvz -C / \
 	&& curl https://cdn.nodemedia.cn/tar/freebsd-9.tar.gz | tar xvz -C / 
 
 ENV GOPATH /go
