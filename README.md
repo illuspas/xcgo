@@ -4,7 +4,7 @@ CGO Cross Compiler, Used for compiling [NMSv3](https://github.com/NodeMedia/Node
 ## Support Target
 * Linux amd64 | arm | arm64 | mips64el
 * Windows amd64 | 386
-* Darwin amd64 
+* Darwin amd64 | arm64
 * FreeBSD amd64
 
 ## Usage 
@@ -33,7 +33,7 @@ docker run --rm -v $(pwd):/workdir -e CGO_ENABLED=1 -e GOOS=windows -e GOARCH=am
 ```
 
 ## Arch and GCC
-| OS        | Arch   |  GCC | G++ |
+| OS        | Arch   |  CC | CXX |
 | --------   | -----  | :----:  | :----:  |
 | Linux      | amd64   |   gcc     | g++     | 
 | Linux        |   arm   |   arm-linux-gnueabihf-gcc  |arm-linux-gnueabihf-g++  |
@@ -42,4 +42,5 @@ docker run --rm -v $(pwd):/workdir -e CGO_ENABLED=1 -e GOOS=windows -e GOARCH=am
 | Windows        |    amd64    |  x86_64-w64-mingw32-gcc  |x86_64-w64-mingw32-g++  |
 | Windows        |    386    |  i686-w64-mingw32-gcc  |i686-w64-mingw32-g++  |
 | MacOS | amd64 | x86_64-apple-darwin20-cc| x86_64-apple-darwin20-c++ |
+| MacOS | arm64 | arm64-apple-darwin20-cc| arm64-apple-darwin20-c++ |
 | FreeBSD | amd64 | x86_64-pc-freebsd9-gcc| x86_64-pc-freebsd9-g++ |
