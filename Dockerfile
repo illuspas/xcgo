@@ -14,8 +14,6 @@ RUN apt-get update && apt-get install -y  \
 	yasm \
 	nasm \
 	ccache \
-	gcc-multilib \
-	g++-multilib \
 	pkg-config \
 	gcc-mingw-w64 \
 	g++-mingw-w64 \
