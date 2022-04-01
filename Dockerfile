@@ -29,7 +29,7 @@ RUN apt-get update && apt-get install -y  \
 	g++-mips64el-linux-gnuabi64 \
 	pkg-config-mips64el-linux-gnuabi64 \
 	&& apt-get clean \
-	&& curl https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz | tar xvz -C /usr/local \
+	&& curl https://dl.google.com/go/go1.17.8.linux-amd64.tar.gz | tar xvz -C /usr/local \
 	&& curl https://cdn.nodemedia.cn/tar/osxcross-11.0.tar.gz | tar xvz -C / \
 	&& curl https://cdn.nodemedia.cn/tar/freebsd-9.tar.gz | tar xvz -C / 
 
