@@ -39,6 +39,7 @@ docker run --rm -v $(pwd):/workdir -e CGO_ENABLED=1 -e GOOS=windows -e GOARCH=am
 | Linux        |   arm   |   arm-linux-gnueabihf-gcc  |arm-linux-gnueabihf-g++  |
 | Linux        |    arm64    |  aarch64-linux-gnu-gcc  |aarch64-linux-gnu-g++  |
 | Linux        |    mips64el    |  mips64el-linux-gnuabi64-gcc  |mips64el-linux-gnuabi64-g++  |
+| Linux        |    loongarch64    |  loongarch64-unknown-linux-gnu-gcc  |loongarch64-unknown-linux-gnu-g++  |
 | Windows        |    amd64    |  x86_64-w64-mingw32-gcc  |x86_64-w64-mingw32-g++  |
 | Windows        |    386    |  i686-w64-mingw32-gcc  |i686-w64-mingw32-g++  |
 | MacOS | amd64 | x86_64-apple-darwin20-cc| x86_64-apple-darwin20-c++ |
