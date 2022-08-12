@@ -3,6 +3,7 @@ FROM ubuntu:xenial
 RUN apt-get update && apt-get install -y  \
 	ca-certificates \
 	unzip \
+	xz-utils \
 	git \
 	curl \
 	make \
