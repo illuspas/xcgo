@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y  \
 	g++-mips64el-linux-gnuabi64 \
 	pkg-config-mips64el-linux-gnuabi64 \
 	&& apt-get clean \
-	&& curl https://dl.google.com/go/go1.19.3.linux-amd64.tar.gz | tar xvz -C /usr/local \
+	&& curl https://dl.google.com/go/go1.19.4.linux-amd64.tar.gz | tar xvz -C /usr/local \
 	&& curl https://cdn.nodemedia.cn/tar/loongarch64-clfs-5.1-cross-tools-gcc-glibc.tar.xz | tar xvJ -C /opt \
 	&& curl https://cdn.nodemedia.cn/tar/osxcross-11.0.tar.gz | tar xvz -C / \
 	&& curl https://cdn.nodemedia.cn/tar/freebsd-9.tar.gz | tar xvz -C / 
