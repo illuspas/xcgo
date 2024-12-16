@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y  \
 	ca-certificates \
@@ -10,10 +10,7 @@ RUN apt-get update && apt-get install -y  \
 	cmake \
 	gcc \
 	g++ \
-	clang \
-	llvm \
 	nasm \
-	ccache \
 	pkg-config \
 	gcc-mingw-w64 \
 	g++-mingw-w64 \
@@ -26,14 +23,10 @@ RUN apt-get update && apt-get install -y  \
 	g++-mips64el-linux-gnuabi64 \
 	pkg-config-mips64el-linux-gnuabi64 \
 	&& apt-get clean \
-	&& curl https://dl.google.com/go/go1.23.4.linux-amd64.tar.gz | tar xvz -C /usr/local \
-	&& curl https://cdn.nodemedia.cn/tar/osxcross-11.0.tar.gz | tar xvz -C / \
-	&& curl https://cdn.nodemedia.cn/tar/freebsd-9.tar.gz | tar xvz -C / 
+	&& curl https://dl.google.com/go/go1.23.4.linux-amd64.tar.gz | tar xvz -C /usr/local
 
 ENV GOPATH /go
 
-ENV LD_LIBRARY_PATH /freebsd/lib
-
-ENV PATH $GOPATH/bin:/usr/local/go/bin:/usr/osxcross/target/bin:/freebsd/bin:/opt/cross-tools/bin:$PATH
+ENV PATH $GOPATH/bin:/usr/local/go/bin:/usr/osxcross/target/bin:$PATH
 
 WORKDIR /workdir
