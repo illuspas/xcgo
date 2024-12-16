@@ -22,6 +22,9 @@ RUN apt-get update && apt-get install -y  \
 	gcc-mips64el-linux-gnuabi64 \
 	g++-mips64el-linux-gnuabi64 \
 	pkg-config-mips64el-linux-gnuabi64 \
+  	gcc-riscv64-linux-gnu \
+ 	g++-riscv64-linux-gnu \
+  	pkg-config-riscv64-linux-gnu \
 	&& apt-get clean \
 	&& curl https://dl.google.com/go/go1.23.4.linux-amd64.tar.gz | tar xvz -C /usr/local
 
