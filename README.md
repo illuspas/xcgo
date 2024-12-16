@@ -2,7 +2,7 @@
 CGO Cross Compiler, Used for compiling [NMSv3](https://github.com/NodeMedia/NodeMediaServer)
 
 ## Support Target
-* Linux amd64 | arm | arm64 | mips64el
+* Linux amd64 | arm64 | mips64el
 * Windows amd64 | 386
 * Darwin amd64 | arm64
 * FreeBSD amd64
@@ -36,7 +36,6 @@ docker run --rm -v $(pwd):/workdir -e CGO_ENABLED=1 -e GOOS=windows -e GOARCH=am
 | OS        | Arch   |  CC | CXX |
 | --------   | -----  | :----:  | :----:  |
 | Linux      | amd64   |   gcc     | g++     | 
-| Linux        |   arm   |   arm-linux-gnueabihf-gcc  |arm-linux-gnueabihf-g++  |
 | Linux        |    arm64    |  aarch64-linux-gnu-gcc  |aarch64-linux-gnu-g++  |
 | Linux        |    mips64el    |  mips64el-linux-gnuabi64-gcc  |mips64el-linux-gnuabi64-g++  |
 | Linux        |    loongarch64    |  loongarch64-unknown-linux-gnu-gcc  |loongarch64-unknown-linux-gnu-g++  |
